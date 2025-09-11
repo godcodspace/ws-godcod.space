@@ -1,39 +1,41 @@
 import { useState } from 'react'
+import Logo from './Logo'
 
 const Hero = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
-    <div className="bg-gradient-to-br from-primary-50 to-white">
+    <div className="min-h-screen bg-neutral-50">
       {/* Navbar */}
-      <nav className="flex items-center justify-between px-6 lg:px-8 py-4 max-w-7xl mx-auto">
+      <nav className="flex items-center justify-between px-6 lg:px-12 py-6 max-w-7xl mx-auto">
         {/* Logo */}
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-primary-600 rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-xl">G</span>
-          </div>
-          <span className="text-xl font-bold text-gray-900">GodCod</span>
+        <div className="flex items-center gap-3">
+          <Logo className="text-neutral-900" />
+          <span className="text-xl font-medium text-neutral-900">GodCod</span>
         </div>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
-          <a href="#features" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
-            Recursos
+          <a href="#products" className="text-neutral-600 hover:text-neutral-900 text-sm font-medium transition-colors">
+            Produtos
           </a>
-          <a href="#pricing" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
+          <a href="#pricing" className="text-neutral-600 hover:text-neutral-900 text-sm font-medium transition-colors">
             Preços
           </a>
-          <a href="#security" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
-            Segurança
+          <a href="#docs" className="text-neutral-600 hover:text-neutral-900 text-sm font-medium transition-colors">
+            Documentação
           </a>
-          <a href="#benefits" className="text-gray-700 hover:text-primary-600 font-medium transition-colors">
-            Benefícios
+          <a href="#company" className="text-neutral-600 hover:text-neutral-900 text-sm font-medium transition-colors">
+            Empresa
           </a>
         </div>
 
-        {/* CTA Button */}
-        <div className="hidden md:block">
-          <button className="bg-primary-600 text-white px-6 py-2.5 rounded-full font-medium hover:bg-primary-700 transition-colors">
+        {/* CTA Buttons */}
+        <div className="hidden md:flex items-center gap-4">
+          <button className="text-neutral-700 px-5 py-2 text-sm font-medium hover:text-neutral-900 transition-colors">
+            Entrar
+          </button>
+          <button className="bg-neutral-900 text-white px-5 py-2 rounded-lg text-sm font-medium hover:bg-neutral-800 transition-colors">
             Começar Agora
           </button>
         </div>
@@ -77,98 +79,74 @@ const Hero = () => {
       )}
 
       {/* Hero Content */}
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Text Content */}
-          <div className="space-y-8">
-            <div className="inline-flex items-center gap-2 bg-secondary-100 text-secondary-700 px-4 py-2 rounded-full text-sm font-medium">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
-              MICRO SAAS INOVADOR
-            </div>
-
-            <div className="space-y-4">
-              <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
-                Transforme suas ideias em
-                <span className="text-primary-600"> produtos digitais</span>
-              </h1>
-              <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
-                Construa, gerencie e escale seus micro SaaS com nossa plataforma completa. 
-                Ferramentas poderosas para empreendedores digitais que querem crescer rápido.
-              </p>
-            </div>
-
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="bg-primary-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-primary-700 transition-all transform hover:scale-105 shadow-lg">
-                Comece Gratuitamente
-              </button>
-              <button className="bg-white text-gray-900 px-8 py-4 rounded-full font-semibold text-lg hover:bg-gray-50 transition-all border-2 border-gray-200">
-                Ver Demonstração
-              </button>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="flex items-center gap-8 pt-4">
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-gray-600">Sem cartão de crédito</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-                </svg>
-                <span className="text-gray-600">Setup em 2 minutos</span>
-              </div>
-            </div>
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 pt-24 pb-20">
+        <div className="text-center">
+          {/* Announcement Badge */}
+          <div className="inline-flex items-center gap-2 mb-8">
+            <span className="px-3 py-1 bg-neutral-100 text-neutral-700 rounded-full text-xs font-medium">
+              Novo
+            </span>
+            <span className="text-sm text-neutral-600">
+              Lançamos o GodCod AI Assistant v2.0
+            </span>
           </div>
 
-          {/* Visual Content */}
-          <div className="relative">
-            {/* Placeholder for illustration/graphic */}
-            <div className="bg-gradient-to-br from-primary-100 to-primary-200 rounded-2xl p-8 shadow-2xl">
-              <div className="bg-white rounded-xl p-6 shadow-lg">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                </div>
-                
-                {/* Dashboard Preview */}
-                <div className="space-y-4">
-                  <div className="bg-gray-100 h-8 rounded animate-pulse"></div>
-                  <div className="grid grid-cols-3 gap-4">
-                    <div className="bg-primary-100 rounded-lg p-4">
-                      <div className="text-2xl font-bold text-primary-600">R$ 35.890</div>
-                      <div className="text-sm text-gray-600">Receita Mensal</div>
-                    </div>
-                    <div className="bg-secondary-100 rounded-lg p-4">
-                      <div className="text-2xl font-bold text-secondary-600">+24%</div>
-                      <div className="text-sm text-gray-600">Crescimento</div>
-                    </div>
-                    <div className="bg-accent-100 rounded-lg p-4">
-                      <div className="text-2xl font-bold text-accent-600">1.2k</div>
-                      <div className="text-sm text-gray-600">Usuários</div>
-                    </div>
-                  </div>
-                  <div className="bg-gray-100 h-32 rounded animate-pulse"></div>
-                </div>
-              </div>
-            </div>
+          {/* Main Heading */}
+          <h1 className="text-5xl lg:text-7xl font-medium text-neutral-900 leading-tight mb-6">
+            Micro serviços inteligentes
+            <br />
+            para <span className="text-neutral-600">desenvolvedores modernos</span>
+          </h1>
+          
+          {/* Subheading */}
+          <p className="text-xl text-neutral-600 max-w-3xl mx-auto mb-12 leading-relaxed">
+            APIs poderosas e ferramentas de IA para acelerar seu desenvolvimento.
+            Processe dados, gere conteúdo e automatize tarefas complexas em segundos.
+          </p>
 
-            {/* Floating Badge */}
-            <div className="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-lg p-4 flex items-center gap-3">
-              <div className="flex -space-x-2">
-                <div className="w-10 h-10 bg-primary-500 rounded-full border-2 border-white"></div>
-                <div className="w-10 h-10 bg-secondary-500 rounded-full border-2 border-white"></div>
-                <div className="w-10 h-10 bg-accent-500 rounded-full border-2 border-white"></div>
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
+            <button className="bg-neutral-900 text-white px-8 py-3 rounded-lg font-medium hover:bg-neutral-800 transition-colors">
+              Começar Gratuitamente
+            </button>
+            <button className="bg-neutral-100 text-neutral-900 px-8 py-3 rounded-lg font-medium hover:bg-neutral-200 transition-colors">
+              Ver Documentação
+            </button>
+          </div>
+
+          {/* Product Cards Preview */}
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+            {/* AI Assistant Card */}
+            <div className="bg-white border border-neutral-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-neutral-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
               </div>
-              <div>
-                <div className="font-bold text-gray-900">+500</div>
-                <div className="text-xs text-gray-600">Empreendedores ativos</div>
+              <h3 className="font-medium text-neutral-900 mb-2">AI Assistant</h3>
+              <p className="text-sm text-neutral-600">Assistente inteligente para geração de código e documentação</p>
+            </div>
+            
+            {/* Data Processing Card */}
+            <div className="bg-white border border-neutral-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-neutral-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
+                </svg>
               </div>
+              <h3 className="font-medium text-neutral-900 mb-2">Data Processing</h3>
+              <p className="text-sm text-neutral-600">APIs para processamento e análise de dados em tempo real</p>
+            </div>
+            
+            {/* Image Generation Card */}
+            <div className="bg-white border border-neutral-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-neutral-100 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="font-medium text-neutral-900 mb-2">Image Generation</h3>
+              <p className="text-sm text-neutral-600">Crie imagens e gráficos com IA generativa avançada</p>
             </div>
           </div>
         </div>
