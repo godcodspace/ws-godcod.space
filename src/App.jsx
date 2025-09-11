@@ -1,17 +1,13 @@
 import Hero from './components/Hero'
-import Features from './components/Features'
-import HowItWorks from './components/HowItWorks'
+import Products from './components/Products'
 import Pricing from './components/Pricing'
-import Security from './components/Security'
 import Footer from './components/Footer'
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-neutral-50">
       <Hero />
-      <Features />
-      <HowItWorks />
-      <Security />
+      <Products />
       <Pricing />
       <Footer />
     </div>
