@@ -9,8 +9,8 @@ const Hero = () => {
       {/* Navbar */}
       <nav className="flex items-center justify-between px-6 lg:px-12 py-6 max-w-7xl mx-auto">
         {/* Logo */}
-        <div className="flex items-center gap-3">
-          <Logo className="text-neutral-900" />
+        <div className="flex items-center gap-2">
+          <Logo size="default" />
           <span className="text-xl font-medium text-neutral-900">GodCod</span>
         </div>
 

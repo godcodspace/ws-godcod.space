@@ -32,8 +32,8 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
           {/* Logo and Description */}
           <div className="lg:col-span-2">
-            <div className="flex items-center gap-3 mb-4">
-              <Logo className="text-neutral-900" size="small" />
+            <div className="flex items-center gap-2 mb-4">
+              <Logo size="small" />
               <span className="text-lg font-medium text-neutral-900">GodCod</span>
             </div>
             <p className="text-neutral-600 text-sm mb-6 max-w-sm">
