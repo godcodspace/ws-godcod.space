@@ -1,72 +1,69 @@
 const Pricing = () => {
   const plans = [
     {
-      name: "Starter",
+      name: "Hobby",
       price: "Grátis",
       period: "para sempre",
-      description: "Perfeito para começar seu primeiro micro SaaS",
+      description: "Para desenvolvedores individuais e projetos pessoais",
       features: [
-        "Até 100 transações/mês",
-        "1 produto SaaS",
-        "Dashboard básico",
-        "Suporte por email",
-        "SSL grátis"
+        "1.000 requisições/mês",
+        "Acesso a todas as APIs",
+        "Rate limit padrão",
+        "Suporte pela comunidade",
+        "SSL incluso"
       ],
       buttonText: "Começar Grátis",
-      buttonStyle: "bg-white text-gray-900 border-2 border-gray-200 hover:bg-gray-50",
+      buttonStyle: "bg-neutral-100 text-neutral-900 hover:bg-neutral-200",
       popular: false
     },
     {
       name: "Pro",
-      price: "R$ 97",
+      price: "R$ 149",
       period: "por mês",
-      description: "Ideal para empreendedores em crescimento",
+      description: "Para startups e equipes em crescimento",
       features: [
-        "Transações ilimitadas",
-        "Até 5 produtos SaaS",
-        "Dashboard avançado",
-        "Suporte prioritário 24/7",
-        "Integrações premium",
-        "API completa",
-        "Relatórios personalizados"
+        "100.000 requisições/mês",
+        "Priority queue",
+        "Rate limit aumentado",
+        "Suporte prioritário",
+        "Webhooks e callbacks",
+        "Analytics detalhado",
+        "99.9% SLA garantido"
       ],
       buttonText: "Começar teste grátis",
-      buttonStyle: "bg-primary-600 text-white hover:bg-primary-700",
+      buttonStyle: "bg-neutral-900 text-white hover:bg-neutral-800",
       popular: true
     },
     {
       name: "Enterprise",
-      price: "R$ 497",
-      period: "por mês",
-      description: "Para empresas que precisam escalar",
+      price: "Customizado",
+      period: "",
+      description: "Soluções personalizadas para grandes empresas",
       features: [
-        "Tudo do plano Pro",
-        "Produtos SaaS ilimitados",
-        "White-label completo",
+        "Requisições ilimitadas",
+        "Infraestrutura dedicada",
+        "Custom models training",
         "Gerente de conta dedicado",
-        "SLA garantido 99.9%",
-        "Treinamento personalizado",
-        "Desenvolvimento customizado"
+        "99.99% SLA garantido",
+        "Suporte 24/7 dedicado",
+        "Compliance e segurança"
       ],
       buttonText: "Falar com vendas",
-      buttonStyle: "bg-white text-gray-900 border-2 border-gray-200 hover:bg-gray-50",
+      buttonStyle: "bg-neutral-100 text-neutral-900 hover:bg-neutral-200",
       popular: false
     }
   ]
 
   return (
-    <section id="pricing" className="py-20 lg:py-32 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <section id="pricing" className="py-24 bg-neutral-50">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <span className="text-primary-600 font-semibold text-sm uppercase tracking-wider">
-            PREÇOS
-          </span>
-          <h2 className="mt-4 text-3xl lg:text-5xl font-bold text-gray-900">
-            Preços simples e transparentes
+          <h2 className="text-4xl lg:text-5xl font-medium text-neutral-900 mb-4">
+            Preços transparentes
           </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Sem taxas ocultas. Cancele quando quiser.
+          <p className="text-xl text-neutral-600">
+            Pague apenas pelo que usar. Sem surpresas.
           </p>
         </div>
 
@@ -75,41 +72,41 @@ const Pricing = () => {
           {plans.map((plan, index) => (
             <div
               key={index}
-              className={`relative rounded-2xl p-8 ${
+              className={`relative bg-white rounded-xl p-8 ${
                 plan.popular
-                  ? 'bg-gradient-to-br from-primary-50 to-white border-2 border-primary-200 shadow-xl scale-105'
-                  : 'bg-white border border-gray-200'
+                  ? 'border-2 border-neutral-900 shadow-xl'
+                  : 'border border-neutral-200'
               }`}
             >
               {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-primary-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    Mais Popular
+                <div className="absolute -top-3 left-8">
+                  <span className="bg-neutral-900 text-white px-3 py-1 rounded-full text-xs font-medium">
+                    Recomendado
                   </span>
                 </div>
               )}
 
               <div className="mb-8">
-                <h3 className="text-2xl font-bold text-gray-900">{plan.name}</h3>
-                <p className="mt-2 text-gray-600">{plan.description}</p>
+                <h3 className="text-xl font-medium text-neutral-900">{plan.name}</h3>
+                <p className="mt-2 text-sm text-neutral-600">{plan.description}</p>
                 <div className="mt-6">
-                  <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
-                  <span className="text-gray-600 ml-2">/{plan.period}</span>
+                  <span className="text-3xl font-medium text-neutral-900">{plan.price}</span>
+                  {plan.period && <span className="text-neutral-600 ml-2">/{plan.period}</span>}
                 </div>
               </div>
 
-              <ul className="space-y-4 mb-8">
+              <ul className="space-y-3 mb-8">
                 {plan.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="flex items-start gap-3">
-                    <svg className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-neutral-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
-                    <span className="text-gray-700">{feature}</span>
+                    <span className="text-sm text-neutral-700">{feature}</span>
                   </li>
                 ))}
               </ul>
 
-              <button className={`w-full py-3 px-6 rounded-full font-semibold transition-all ${plan.buttonStyle}`}>
+              <button className={`w-full py-3 px-6 rounded-lg font-medium text-sm transition-all ${plan.buttonStyle}`}>
                 {plan.buttonText}
               </button>
             </div>
