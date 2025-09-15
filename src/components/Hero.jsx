@@ -43,6 +43,9 @@ const Hero = () => {
         {/* Mobile Menu Button */}
         <button
           className="md:hidden p-2"
+          aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={mobileMenuOpen}
+          aria-controls="mobile-menu"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,7 +60,7 @@ const Hero = () => {
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100">
+        <div id="mobile-menu" className="md:hidden bg-white border-t border-gray-100">
           <div className="px-6 py-4 space-y-3">
             <a href="#features" className="block text-gray-700 hover:text-primary-600 font-medium">
               Recursos
