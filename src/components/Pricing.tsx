@@ -1,5 +1,16 @@
-const Pricing = () => {
-  const plans = [
+type Plan = {
+  name: string
+  price: string
+  period: string
+  description: string
+  features: string[]
+  buttonText: string
+  buttonStyle: string
+  popular: boolean
+}
+
+const Pricing = (): JSX.Element => {
+  const plans: Plan[] = [
     {
       name: "Hobby",
       price: "Grátis",

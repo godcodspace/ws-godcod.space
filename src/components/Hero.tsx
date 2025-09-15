@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Logo from './Logo'
 
-const Hero = () => {
+const Hero = (): JSX.Element => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (

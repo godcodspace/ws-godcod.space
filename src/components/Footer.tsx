@@ -1,6 +1,6 @@
 import Logo from './Logo'
 
-const Footer = () => {
+const Footer = (): JSX.Element => {
   return (
     <footer className="bg-white border-t border-neutral-200">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-16">

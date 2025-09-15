@@ -1,5 +1,12 @@
-const Security = () => {
-  const securityFeatures = [
+type SecurityFeature = {
+  title: string
+  description: string
+  bulletColor: string
+  dotColor: string
+}
+
+const Security = (): JSX.Element => {
+  const securityFeatures: SecurityFeature[] = [
     {
       title: "Autenticação de dois fatores",
       description: "Proteção adicional para sua conta com verificação em duas etapas.",
