@@ -1,5 +1,12 @@
-const Features = () => {
-  const features = [
+type Feature = {
+  title: string
+  description: string
+  icon: string
+  color: string
+}
+
+const Features = (): JSX.Element => {
+  const features: Feature[] = [
     {
       title: "Desenvolvimento Rápido",
       description: "Crie e lance seus produtos SaaS em tempo recorde com nossas ferramentas automatizadas.",

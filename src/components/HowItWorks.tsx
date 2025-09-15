@@ -1,5 +1,11 @@
-const HowItWorks = () => {
-  const steps = [
+type Step = {
+  number: string
+  title: string
+  description: string
+}
+
+const HowItWorks = (): JSX.Element => {
+  const steps: Step[] = [
     {
       number: "01",
       title: "Crie sua conta",

@@ -1,5 +1,16 @@
-const Products = () => {
-  const products = [
+type ProductStatus = 'Disponível' | 'Beta' | 'Em breve'
+
+type Product = {
+  name: string
+  description: string
+  features: string[]
+  icon: string
+  status: ProductStatus
+  apiEndpoint: string
+}
+
+const Products = (): JSX.Element => {
+  const products: Product[] = [
     {
       name: "GodCod AI Assistant",
       description: "Assistente de IA para desenvolvimento, geração de código e documentação técnica.",
